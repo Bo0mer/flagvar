@@ -5,6 +5,7 @@ import "fmt"
 // Array represents string array flag variable.
 type Array []string
 
+// String returns the string representation of the array.
 func (a *Array) String() string {
 	return fmt.Sprintf("%v", *a)
 }

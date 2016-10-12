@@ -10,8 +10,14 @@ func TestArray(t *testing.T) {
 	want0 := "one"
 	want1 := "two"
 	var a flagvar.Array
-	a.Set(want0)
-	a.Set(want1)
+	err := a.Set(want0)
+	if err != nil {
+		t.Fatal(err)
+	}
+	err = a.Set(want1)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	if len(a) != 2 {
 		t.Errorf("expected array of len 2, got %d\n", len(a))

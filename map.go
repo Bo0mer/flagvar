@@ -13,7 +13,7 @@ func (m *Map) String() string {
 	return fmt.Sprintf("%v", *m)
 }
 
-// Set adds element to the map. It must be in key=value format, otherwise
+// Set adds element to the map. It must be in key:value format, otherwise
 // error is returned.
 func (m *Map) Set(value string) error {
 	if *m == nil {
